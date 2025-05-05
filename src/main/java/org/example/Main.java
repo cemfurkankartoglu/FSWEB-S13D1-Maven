@@ -6,7 +6,13 @@ public class Main {
     }
 
     public static boolean shouldWakeUp(boolean isBarking, int clock) {
-        
+        if (!isBarking) {
+            return false;
+        } else if (clock < 8 || clock > 20) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static boolean hasTeen(int firstAge, int secondAge, int thirdAge) {
